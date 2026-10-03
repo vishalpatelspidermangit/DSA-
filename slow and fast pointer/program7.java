@@ -61,8 +61,8 @@ public class program7 {
             first.next = second;
             second.next = t1;
 
-            first = t1;
+            first = t1; 
             second = t2;
         }
     }
-}
+}  
