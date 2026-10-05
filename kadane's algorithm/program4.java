@@ -31,6 +31,16 @@ Explanation: The final subarray needs to be non-empty. You can't choose [-1] and
 
 public class program4 {
        public int maximumSum(int[] arr) {
-        
-    }
+        int nodel = arr[0];                    // best sum ending at i, no deletion
+        int onedel = Integer.MIN_VALUE / 2;    // best sum ending at i, one deletion used
+        int res = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            int pre = nodel;
+            nodel = Math.max(arr[i], nodel + arr[i]);
+            onedel = Math.max(pre, onedel + arr[i]);
+            res = Math.max(res, Math.max(nodel, onedel));
+        }
+        return res;
+      }
 }
