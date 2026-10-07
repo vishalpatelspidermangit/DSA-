@@ -38,7 +38,7 @@ public class program4 {
         for (int i = 1; i < arr.length; i++) {
             int pre = nodel;
             nodel = Math.max(arr[i], nodel + arr[i]);
-            onedel = Math.max(pre, onedel + arr[i]);
+            onedel = Math.max(pre, onedel + arr[i]); 
             res = Math.max(res, Math.max(nodel, onedel));
         }
         return res;
